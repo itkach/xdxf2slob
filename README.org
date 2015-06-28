@@ -1,0 +1,62 @@
+* xdxf2slob
+  This is a tool to convert [[http://sourceforge.net/projects/xdxf/][XDXF]] dictionary files to [[https://github.com/itkach/slob][slob]] format.
+
+** Installation
+
+   Create Python 3 virtual environment and install slob.py as
+   described at http://github.org/itkach/slob/.
+
+   In this virtual environment run
+
+   #+BEGIN_SRC sh
+   pip install git+https://github.com/itkach/xdxf2slob.git
+   #+END_SRC
+
+** Usage
+
+   [[http://sourceforge.net/projects/xdxf/files/][Download]] an XDXF dictionary archive. For example:
+
+   #+BEGIN_SRC sh
+   wget http://downloads.sourceforge.net/project/xdxf/dicts-XDXF/dictd04/comn_dictd04_mueller7.tar.bz2
+   comn_dictd04_mueller7.tar.bz2
+   #+END_SRC
+
+   Then run converter:
+
+   #+BEGIN_SRC sh
+   xdxf2slob comn_dictd04_mueller7.tar.bz2
+   #+END_SRC
+
+   ~comn_dictd04_mueller7.slob~ will be created in the same directory.
+
+   #+BEGIN_SRC sh
+
+usage: xdxf2slob [-h] [--skip-article-title] [--remove-newline]
+                 [-o OUTPUT_FILE] [-c {lzma2,zlib}] [-b BIN_SIZE]
+                 [-a CREATED_BY] [-w WORK_DIR]
+                 input_file
+
+positional arguments:
+  input_file            XDXF file name
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --skip-article-title  Do not include article key in rendered article: some
+                        XDXF dictionaries already inlude title in article text
+                        and need this to avoid title duplication
+  --remove-newline      Remove new line characters from article text
+  -o OUTPUT_FILE, --output-file OUTPUT_FILE
+                        Name of output slob file
+  -c {lzma2,zlib}, --compression {lzma2,zlib}
+                        Name of compression to use. Default: zlib
+  -b BIN_SIZE, --bin-size BIN_SIZE
+                        Minimum storage bin size in kilobytes. Default: 256
+  -a CREATED_BY, --created-by CREATED_BY
+                        Value for created.by tag. Identifier (e.g. name or
+                        email) for slob file creator
+  -w WORK_DIR, --work-dir WORK_DIR
+                        Directory for temporary files created during
+                        compilation. Default: .
+
+
+   #+END_SRC

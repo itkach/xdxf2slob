@@ -1,0 +1,54 @@
+body {
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #002bb8;
+    background: none;
+}
+
+a:visited {
+    color: #5a3696;
+}
+
+a:active {
+    color: #faa700;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.ar {
+    white-space: pre-line;
+    line-height: 1.3;
+}
+
+.k {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.tr {
+    font-weight: bold;
+    color: maroon;
+}
+
+.pos {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.co {
+    color: #666666;
+}
+
+.ex {
+    font-family: serif;
+    font-style: italic;
+}
