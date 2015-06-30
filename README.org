@@ -18,7 +18,6 @@
 
    #+BEGIN_SRC sh
    wget http://downloads.sourceforge.net/project/xdxf/dicts-XDXF/dictd04/comn_dictd04_mueller7.tar.bz2
-   comn_dictd04_mueller7.tar.bz2
    #+END_SRC
 
    Then run converter:
