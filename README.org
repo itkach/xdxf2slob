@@ -29,6 +29,20 @@
 
    ~comn_dictd04_mueller7.slob~ will be created in the same directory.
 
+   Verify dictionary tags:
+
+   #+BEGIN_SRC sh
+   slob info comn_dictd04_mueller7.slob
+   #+END_SRC
+
+   Set tag values as necessary, for example:
+
+   #+BEGIN_SRC sh
+   slob tag -n license.name -v "Public domain" comn_dictd04_mueller7.slob
+   slob tag -n created.by -v me@example.com comn_dictd04_mueller7.slob
+   #+END_SRC
+
+
    #+BEGIN_SRC sh
 
 usage: xdxf2slob [-h] [--skip-article-title] [--remove-newline]
