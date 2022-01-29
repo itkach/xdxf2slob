@@ -19,6 +19,7 @@ import logging
 import os
 import sys
 import urllib
+import urllib.parse
 
 from copy import deepcopy
 from itertools import combinations
