@@ -149,7 +149,7 @@ class XDXF():
             tail = tail.lstrip()
             element.text = tail + element.text if element.text else tail
         self._transform_element(element, abbreviations)
-        for child in element.getiterator():
+        for child in element.iter():
             self._transform_element(child, abbreviations)
 
         txt = etree.tostring(element, encoding='unicode')
